@@ -18,8 +18,8 @@ const fs = require("fs");
 const PORT = process.env.PORT || 3500;
 
 const options = {
-  key: fs.readFileSync("./config/cert.key"),
-  cert: fs.readFileSync("./config/cert.crt"),
+  key: fs.readFileSync("./cert.key"),
+  cert: fs.readFileSync("./cert.crt"),
 };
 
 // Connect to MongoDB
