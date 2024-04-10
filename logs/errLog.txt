@@ -1,0 +1,6 @@
+20230421	13:00:50	6d94a742-0d49-4001-bb04-94d2aa46e1c6	TypeError: fsPromises.readFile_1 is not a function
+20230421	13:01:16	b3a78f38-435c-4854-a9c5-ed50e81c677c	TypeError: fsPromises.readFile_1 is not a function
+20230421	13:01:34	790ff18d-f74d-41e8-b9de-9dd1dcc6336b	TypeError: fsPromises.readFile_1 is not a function
+20230421	14:24:21	c6a5301e-b816-4d1c-8c25-a82fc8c0aa08	Error: Not allowed by CORS
+20230421	14:24:42	e920dcd8-17cd-4509-af19-72c4495acb6e	Error: Not allowed by CORS
+20240313	18:39:14	776a138b-3352-4e49-9376-b2f62a749a34	SyntaxError: Expected property name or '}' in JSON at position 4 (line 2 column 3)
