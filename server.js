@@ -11,7 +11,16 @@ const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn');
+// fs and https 모듈 가져오기
+const https = require("https");
+const fs = require("fs");
+
 const PORT = process.env.PORT || 3500;
+
+const options = {
+  key: fs.readFileSync("./config/cert.key"),
+  cert: fs.readFileSync("./config/cert.crt"),
+};
 
 // Connect to MongoDB
 connectDB();
@@ -60,4 +69,10 @@ app.use(errorHandler);
 mongoose.connection.once('open', () => {
 	console.log('Connected to MongoDB');
 	app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+	// https 의존성으로 certificate와 private key로 새로운 서버를 시작
+	https.createServer(options, app).listen(8080, () => {
+		console.log(`HTTPS server started on port 8080`);
+	});
+	
 });
